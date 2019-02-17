@@ -9,5 +9,5 @@ function greet({ greeting, name }: Salutation): string {
 
 const message: string = greet({
   greeting: 'Hello',
-  name: 'John',
+  name: 'Jhn',
 })
