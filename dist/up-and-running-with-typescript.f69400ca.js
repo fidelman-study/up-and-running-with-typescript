@@ -105,15 +105,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({"index.tsx":[function(require,module,exports) {
-function greet(_a) {
-  var greeting = _a.greeting,
-      name = _a.name;
-  return greeting + ", " + name;
-}
-
-var message = greet({
-  greeting: 'Hello',
-  name: 'Jhn'
+var input = document.getElementById('input');
+input.autofocus = true;
+input.addEventListener('input', function (event) {
+  var currentTarget = event.currentTarget;
+  console.log(currentTarget.value);
 });
 },{}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
