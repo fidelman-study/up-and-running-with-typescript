@@ -1,5 +1,3 @@
-function fill<T>(array: Array<any>, value: T): Array<T>  {
-  return array.map(() => value)
-}
+import * as _ from 'lodash'
 
-const result = fill([1,2,3,], 'a')
+console.log(_.uniq([1,1,2]))
