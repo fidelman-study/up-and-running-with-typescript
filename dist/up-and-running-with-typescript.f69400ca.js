@@ -105,12 +105,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({"index.tsx":[function(require,module,exports) {
-var input = document.getElementById('input');
-input.autofocus = true;
-input.addEventListener('input', function (event) {
-  var currentTarget = event.currentTarget;
-  console.log(currentTarget.value);
-});
+function fill(array, value) {
+  return array.map(function () {
+    return value;
+  });
+}
+
+var result = fill([1, 2, 3], 'a');
 },{}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
