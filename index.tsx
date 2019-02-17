@@ -1,6 +1,13 @@
-import * as React from 'react'
-import {render} from 'react-dom'
+type Salutation = {
+  greeting: string,
+  name: string,
+}
 
-const App = () => <h1>Hello</h1>
+function greet({ greeting, name }: Salutation): string {
+  return `${greeting}, ${name}`
+}
 
-render(<App />, document.getElementById('app'))
+const message: string = greet({
+  greeting: 'Hello',
+  name: 'John',
+})
