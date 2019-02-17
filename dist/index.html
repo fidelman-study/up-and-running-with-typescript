@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div style="font-size: 30px; font-family: Helvetica" id="log"></div>
+  <script>function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+(function () {
+  var old = console.log;
+  var logger = document.getElementById('log');
+
+  console.log = function (message) {
+    if (_typeof(message) == 'object') {
+      logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
+    } else {
+      logger.innerHTML += message + '<br />';
+    }
+  };
+})();</script>
+  <script src="/up-and-running-with-typescript.77de5100.js"></script>
+</body>
+</html>
